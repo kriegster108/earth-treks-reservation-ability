@@ -1,21 +1,3 @@
 {
-    "url" : "https://app.rockgympro.com/b/widget/?a=equery",
-    "post": {  "PreventChromeAutocomplete":"",
-        "random":"5f9b7cfdec988",
-        "iframeid":"",
-        "mode":"p",
-        "fctrl_1":"offering_guid",
-        "offering_guid":"d1aea7c0b17d4a56b6e03b75ae50f8dd",
-        "fctrl_2":"course_guid",
-        "course_guid":""},
-    "form": {
-        "PreventChromeAutocomplete" : {
-            "fctrl_1" : {
-                "offering_guid": "d1aea7c0b17d4a56b6e03b75ae50f8dd"
-            },
-            "fctrl_2" : {
-                "course_guid": "d1aea7c0b17d4a56b6e03b75ae50f8dd"
-            }
-        }
-    }
+  "url": "https://app.rockgympro.com/b/widget/?a=equery"
 }

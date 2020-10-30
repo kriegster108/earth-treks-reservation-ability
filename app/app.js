@@ -1,19 +1,23 @@
-import RequestModule from './requests/request_module.js' 
-import Logic from './requests/logic.js'
- 
+import RequestModule from "./requests/request_module.js";
+import Logic from "./requests/logic.js";
+
 const request = new RequestModule();
 const logic = new Logic();
 
 async function app() {
-  if(logic.isThereNoReservation(await request.postRequest(logic.getSpecificWeekdayFutureDate(2)))) wait(10000);
-  console.log('it works!!!')
+  const futureDate = logic.getSpecificWeekdayFutureDate(2);
+  if (logic.isThereNoReservation(await request.postRequest(futureDate))) {
+    wait(60000 * 15);
+  } else {
+    console.log(`opening found for ${futureDate} !!!!`);
+    wait(60000 * 3000);
+  }
 }
 
 function wait(ms) {
-  setTimeout(function() {  
+  setTimeout(function () {
     app();
-    }, ms)
+  }, ms);
 }
-
 
 app();
