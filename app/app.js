@@ -10,7 +10,7 @@ async function app() {
     wait(60000 * 15);
   } else {
     console.log(`opening found for ${futureDate} !!!!`);
-    wait(60000 * 3000);
+    wait(60000 * 15);
   }
 }
 
