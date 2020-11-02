@@ -1,11 +1,11 @@
 import RequestModule from "./requests/request_module.js";
 import Logic from "./requests/logic.js";
-
+import pkg from "datejs";
 const request = new RequestModule();
 const logic = new Logic();
 
 async function app() {
-  const futureDate = logic.getSpecificWeekdayFutureDate(2);
+  const futureDate = logic.getNextWeekday("wednesday");
   if (logic.isThereNoReservation(await request.postRequest(futureDate))) {
     console.log(`Checking for date of: ${futureDate}:: reservation not ready`);
     wait(60000 * 15);

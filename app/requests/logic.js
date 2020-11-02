@@ -20,10 +20,8 @@ export default class Logic {
     if (checkCount) return checkCount.length;
     return 0;
   }
-  // 2
-  getSpecificWeekdayFutureDate(numOfDayOfWeek) {
-    const d = new Date();
-    d.setDate(d.getUTCDate() + ((numOfDayOfWeek + 7 - d.getUTCDay()) % 7));
-    return d.toISOString().split("T")[0].trim();
+
+  getNextWeekday(day) {
+    return Date.parse(`next ${day}`).toISOString().split("T")[0].trim();
   }
 }
