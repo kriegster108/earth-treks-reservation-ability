@@ -12,9 +12,9 @@ async function app() {
   if (logic.isThereNoReservation(await request.postRequest(futureDate))) {
     console.log(`Checking for date of: ${futureDate}:: reservation not ready`);
     wait(60000 * 15);
+    await mail.sendEmail();
   } else {
     console.log(`opening found for ${futureDate} !!!!`);
-    await mail.sendEmail();
     wait(60000 * 15);
   }
 }
