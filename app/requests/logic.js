@@ -23,7 +23,7 @@ export default class Logic {
   // 2
   getSpecificWeekdayFutureDate(numOfDayOfWeek) {
     const d = new Date();
-    d.setDate(d.getDate() + ((numOfDayOfWeek + 7 - d.getDay()) % 7));
+    d.setDate(d.getUTCDate() + ((numOfDayOfWeek + 7 - d.getUTCDay()) % 7));
     return d.toISOString().split("T")[0].trim();
   }
 }
